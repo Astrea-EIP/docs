@@ -1,0 +1,16 @@
+{
+  "id": "docs/Mobile/index",
+  "title": "Mobile Application Documentation",
+  "description": "",
+  "source": "@site/docs/docs/Mobile/index.md",
+  "sourceDirName": "docs/Mobile",
+  "slug": "/docs/Mobile/",
+  "permalink": "/docs/docs/Mobile/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Mobile Application Documentation"
+  }
+}

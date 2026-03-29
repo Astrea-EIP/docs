@@ -1,0 +1,20 @@
+{
+  "id": "docs/Contribution/index",
+  "title": "Contribution Documentation",
+  "description": "",
+  "source": "@site/docs/docs/Contribution/index.md",
+  "sourceDirName": "docs/Contribution",
+  "slug": "/docs/Contribution/",
+  "permalink": "/docs/docs/Contribution/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Contribution Documentation",
+    "last_update": {
+      "date": "2024-03-18T00:00:00.000Z",
+      "author": "Léopold"
+    }
+  }
+}

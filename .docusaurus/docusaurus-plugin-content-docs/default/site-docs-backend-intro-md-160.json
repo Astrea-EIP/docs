@@ -1,0 +1,22 @@
+{
+  "id": "backend/intro",
+  "title": "Backend",
+  "description": "Backend documentation.",
+  "source": "@site/docs/backend/intro.md",
+  "sourceDirName": "backend",
+  "slug": "/backend/intro",
+  "permalink": "/docs/backend/intro",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "intro",
+    "title": "Backend"
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Web",
+    "permalink": "/docs/web/intro"
+  }
+}

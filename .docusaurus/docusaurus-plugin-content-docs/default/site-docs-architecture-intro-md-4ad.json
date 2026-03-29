@@ -1,0 +1,22 @@
+{
+  "id": "architecture/intro",
+  "title": "Architecture",
+  "description": "Architecture documentation.",
+  "source": "@site/docs/architecture/intro.md",
+  "sourceDirName": "architecture",
+  "slug": "/architecture/intro",
+  "permalink": "/docs/architecture/intro",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "intro",
+    "title": "Architecture"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Deployment",
+    "permalink": "/docs/deployment/intro"
+  }
+}

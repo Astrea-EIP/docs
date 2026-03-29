@@ -1,0 +1,16 @@
+{
+  "id": "docs/Web/index",
+  "title": "Website Application Documentation",
+  "description": "",
+  "source": "@site/docs/docs/Web/index.md",
+  "sourceDirName": "docs/Web",
+  "slug": "/docs/Web/",
+  "permalink": "/docs/docs/Web/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Website Application Documentation"
+  }
+}

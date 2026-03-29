@@ -1,0 +1,26 @@
+{
+  "id": "mobile/intro",
+  "title": "Mobile",
+  "description": "Mobile documentation.",
+  "source": "@site/docs/mobile/intro.md",
+  "sourceDirName": "mobile",
+  "slug": "/mobile/intro",
+  "permalink": "/docs/mobile/intro",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "intro",
+    "title": "Mobile"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Web",
+    "permalink": "/docs/web/intro"
+  },
+  "next": {
+    "title": "Engine",
+    "permalink": "/docs/engine/intro"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "docs/intro",
+  "title": "intro",
+  "description": "touch docs/intro.md",
+  "source": "@site/docs/docs/intro.md",
+  "sourceDirName": "docs",
+  "slug": "/docs/intro",
+  "permalink": "/docs/docs/intro",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}
