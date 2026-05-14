@@ -1,0 +1,20 @@
+name: Feature
+description: Request a new documentation or handbook capability
+title: "feat: "
+labels: ["type:feature", "area:docs", "priority:P2-medium"]
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+    validations:
+      required: true

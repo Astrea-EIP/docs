@@ -1,0 +1,17 @@
+name: Spike
+description: Investigate documentation architecture or process questions
+title: "spike: "
+labels: ["type:spike", "area:docs", "priority:P2-medium"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Expected output
+    validations:
+      required: true

@@ -1,0 +1,15 @@
+name: Task
+description: Define a focused documentation maintenance task
+title: "task: "
+labels: ["type:task", "area:docs", "priority:P2-medium"]
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation
