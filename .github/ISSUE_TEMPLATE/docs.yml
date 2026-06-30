@@ -1,0 +1,17 @@
+name: Documentation
+description: Update central handbook content
+title: "docs: "
+labels: ["type:docs", "area:docs", "priority:P3-low"]
+body:
+  - type: textarea
+    id: change
+    attributes:
+      label: Documentation change
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason
+    validations:
+      required: true

@@ -1,41 +1,68 @@
-# Website
+# Astrea Engineering Handbook
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This repository hosts the central engineering handbook for the `Astrea-EIP` organization.
+It is the official source of truth for cross-repository standards such as architecture, contribution workflow, CI, release tagging, deployment orchestration, and documentation governance.
 
-## Installation
+## What belongs here
 
-```bash
-yarn
-```
+This repository owns:
 
-## Local Development
+- organization-wide engineering standards
+- Docusaurus configuration and site navigation
+- centralized handbook pages under `docs/`
+- synchronized technical documentation imported from source repositories
 
-```bash
-yarn start
-```
+This repository does not own:
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+- application source code
+- business logic
+- deployment runtime state
+- repository-specific implementation details as the primary source of truth
 
-## Build
+## Local development
 
-```bash
-yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
+Use `pnpm` for local work.
 
 ```bash
-USE_SSH=true yarn deploy
+pnpm install
+pnpm start
 ```
 
-Not using SSH:
+Build the static site locally:
 
 ```bash
-GIT_USER=<Your GitHub username> yarn deploy
+pnpm build
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+## Repository structure
+
+```text
+docs/
+  architecture/
+  repositories/
+  contribution/
+  workflows/
+  operations/
+  standards/
+src/
+static/
+docusaurus.config.js
+sidebars.js
+```
+
+## Documentation ownership model
+
+- The `docs` repository defines shared engineering rules.
+- Each source repository keeps its own local `README.md`, `CONTRIBUTING.md`, `LICENSE`, and technical `docs/` content.
+- Technical documentation authored in source repositories may be synchronized into this portal through GitHub Actions.
+
+## Updating the handbook
+
+- Update this repository when a rule affects multiple repositories or teams.
+- Update the source repository when the change is local to that repository.
+- Keep handbook changes and workflow changes in the same pull request when they are directly related.
+
+## Documentation synchronization
+
+The long-term target model is an automated pull request into `docs` whenever synchronized content changes in a source repository.
+Until then, any direct synchronization workflow must keep the source repository as the authoring source.
