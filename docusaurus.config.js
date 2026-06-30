@@ -2,73 +2,77 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Astrea Documentation',
-  tagline: 'Documentation for Astrea Developers',
+  title: 'Astrea Engineering Handbook',
+  tagline: 'Official engineering standards and documentation for Astrea-EIP',
   favicon: 'img/favicon.ico',
-
   future: {
     v4: true,
   },
-
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  url: 'https://astrea-eip.github.io',
   baseUrl: '/',
-
-  // GitHub pages deployment config.
   organizationName: 'Astrea-EIP',
-  projectName: 'Astrea', // TODO
-
+  projectName: 'docs',
   onBrokenLinks: 'throw',
-
-  i18n: {
-    defaultLocale: 'fr',
-    locales: ['fr'],
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'throw',
+    },
   },
-
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          routeBasePath: '/',
         },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
       }),
     ],
   ],
-
   plugins: [
     [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
+      require.resolve('@easyops-cn/docusaurus-search-local'),
       {
         hashed: true,
       },
     ],
   ],
-
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/docusaurus-social-card.jpg', // TODO
       colorMode: {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'Astrea Documentation',
-        logo: {
-          alt: 'Astrea Logo',
-          src: 'img/logo.svg',
-        },
+        title: 'Astrea Engineering Handbook',
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            type: 'doc',
+            docId: 'intro',
             position: 'left',
             label: 'Documentation',
+          },
+          {
+            to: '/architecture/overview',
+            label: 'Architecture',
+            position: 'left',
+          },
+          {
+            to: '/contribution/getting-started',
+            label: 'Contribution',
+            position: 'left',
+          },
+          {
+            to: '/workflows/ci',
+            label: 'Workflows',
+            position: 'left',
           },
           {
             href: 'https://github.com/Astrea-EIP',
@@ -81,9 +85,24 @@ const config = {
         style: 'dark',
         links: [
           {
+            title: 'Handbook',
+            items: [
+              {
+                label: 'Documentation',
+                to: '/',
+              },
+              {
+                label: 'Contribution',
+                to: '/contribution/getting-started',
+              },
+              {
+                label: 'Workflows',
+                to: '/workflows/ci',
+              },
+            ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Astrea.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Astrea-EIP.`,
       },
       prism: {
         theme: prismThemes.github,

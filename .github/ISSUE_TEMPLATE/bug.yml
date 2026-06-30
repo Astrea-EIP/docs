@@ -1,0 +1,18 @@
+name: Bug
+description: Report a documentation or handbook defect
+title: "fix: "
+labels: ["type:bug", "area:docs", "priority:P1-high"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Describe the incorrect or missing documentation behavior.
+    validations:
+      required: true
