@@ -19,10 +19,9 @@ This page defines the standard flow used to promote validated versions from prep
 ## Procedure
 
 1. Confirm the desired versions are stable in `preprod`.
-2. Run the promotion workflow or script.
-3. Copy the selected `version` values from `preprod` to `prod`.
-4. Validate the resulting production configuration.
-5. Merge the promotion change with full traceability.
+2. Open a pull request that copies the selected `version` values from `preprod` to `prod`.
+3. Validate the resulting production configuration.
+4. Merge the promotion change with full traceability.
 
 ## Validation checklist
 
