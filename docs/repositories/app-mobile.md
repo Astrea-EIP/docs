@@ -44,4 +44,4 @@ description: Ownership, accepted changes, and documentation expectations for the
 
 - CI and review validation
 - release tagging after merge to `main`
-- documentation synchronization into `docs`
+- local documentation, linked from the handbook's Repositories section

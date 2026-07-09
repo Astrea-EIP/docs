@@ -45,4 +45,4 @@ description: Ownership, accepted changes, and documentation expectations for the
 
 - CI and pull request validation
 - merge-triggered semantic tagging
-- documentation sync on `docs/**`
+- local documentation, linked from the handbook's Repositories section

@@ -44,4 +44,4 @@ description: Ownership, accepted changes, and documentation expectations for the
 
 - CI and review validation
 - semantic release tagging
-- documentation sync into the engine section of `docs`
+- local documentation, linked from the handbook's Repositories section

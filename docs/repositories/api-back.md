@@ -46,4 +46,5 @@ description: Ownership, accepted changes, and documentation expectations for the
 
 - CI with lint, type checks, tests, and build
 - semantic version tagging on merged `main`
-- documentation sync into the backend section of `docs`
+- scheduled engine version check, proposing a pull request when `core-moteur` publishes a newer tag
+- local documentation, linked from the handbook's Repositories section
