@@ -57,6 +57,18 @@ services:
     ref: main
 ```
 
+## Local development
+
+Local development is not a deployed environment and has no entry in
+`deploy-orchestration`. There is a single reference branch, `main`; `preprod`
+and `prod` are deployment targets pinned to tags, not branches.
+
+Each developer runs their own disposable local data (for example a local
+MongoDB, seeded from a repo-local `docker-compose.yml`) instead of sharing a
+"dev" server. This gives realistic, prod-like data to develop against without
+risking `preprod`, which must stay stable and always ready for promotion. See
+the relevant repository's `CONTRIBUTING.md` for its local setup.
+
 ## Validation checklist
 
 - Environment files use `version`, never `ref`.
