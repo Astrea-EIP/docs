@@ -33,5 +33,15 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Validate design tokens
+        run: pnpm tokens:validate
+
+      - name: Check generated design tokens
+        run: |
+          test -f design-tokens/generated/astrea.tokens.css
+          test -f design-tokens/generated/astrea_tokens.dart
+          pnpm tokens:generate
+          git diff --exit-code -- design-tokens/generated
+
       - name: Build handbook
         run: pnpm build
