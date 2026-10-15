@@ -1,49 +1,49 @@
 ---
 title: Design tokens
 sidebar_position: 1
-description: Source et synchronisation des fondations visuelles partagées par Astrea.
+description: Source and synchronization of Astrea's shared visual foundations.
 ---
 
-# Design tokens partagés
+# Shared design tokens
 
-Les fondations visuelles Astrea sont définies dans le fichier Figma `10 - Foundations`, puis représentées dans [`design-tokens/tokens.json`](https://github.com/Astrea-EIP/docs/blob/main/design-tokens/tokens.json).
+Astrea's visual foundations are defined in the `10 - Foundations` Figma page and represented in [`design-tokens/tokens.json`](https://github.com/Astrea-EIP/docs/blob/main/design-tokens/tokens.json).
 
-Le JSON est la source consommée par les sorties générées :
+The JSON is the source consumed by the generated outputs:
 
-- CSS pour `app-web` ;
-- Dart pour `app-mobile`.
+- CSS for `app-web`
+- Dart for `app-mobile`
 
-Les sorties ne doivent pas être modifiées manuellement. Une mise à jour commence par Figma, puis met à jour `tokens.json`, régénère les sorties et synchronise les deux dépôts applicatifs.
+Generated outputs must not be edited manually. An update starts in Figma, then updates `tokens.json`, regenerates the outputs, and synchronizes both application repositories.
 
-## Procédure de synchronisation
+## Synchronization procedure
 
-Après une modification validée dans Figma :
+After an approved change in Figma:
 
-1. Mettre à jour `design-tokens/tokens.json`.
-2. Exécuter `pnpm tokens:validate`.
-3. Exécuter `pnpm tokens:generate`.
-4. Synchroniser `design-tokens/generated/astrea.tokens.css` avec `app-web/src/styles/tokens.css`.
-5. Synchroniser `design-tokens/generated/astrea_tokens.dart` avec `app-mobile/lib/core/design_tokens.dart`.
-6. Vérifier les trois dépôts avec leurs commandes locales habituelles.
-7. Ouvrir une PR par dépôt, toutes liées au même ticket.
+1. Update `design-tokens/tokens.json`.
+2. Run `pnpm tokens:validate`.
+3. Run `pnpm tokens:generate`.
+4. Synchronize `design-tokens/generated/astrea.tokens.css` with `app-web/src/styles/tokens.css`.
+5. Synchronize `design-tokens/generated/astrea_tokens.dart` with `app-mobile/lib/core/design_tokens.dart`.
+6. Validate all three repositories with their usual local commands.
+7. Open one pull request per repository, all linked to the same issue.
 
-Les PR Web et Mobile doivent indiquer le commit ou tag de la source utilisée :
+The Web and Mobile pull requests must state the commit or tag of the source used:
 
 ```text
 Design tokens source: docs@<commit-or-tag>
 ```
 
-La CI du dépôt `docs` vérifie les contrastes et échoue si la génération modifie les sorties versionnées.
+The `docs` repository CI validates contrast ratios and fails if generation modifies the versioned outputs.
 
-## Accessibilité
+## Accessibility
 
-- Le texte doit atteindre `4,5:1`.
-- Les composants et bordures doivent atteindre `3:1`.
-- `color/border` est réservé aux séparateurs et bordures décoratives.
-- `color/border-strong` est réservé aux champs, états de focus et composants interactifs.
+- Text must reach `4.5:1`.
+- Components and borders must reach `3:1`.
+- `color/border` is reserved for separators and decorative borders.
+- `color/border-strong` is reserved for fields, focus states, and interactive components.
 
-Les valeurs Figma qui échouent lorsqu'elles sont utilisées hors de leur contexte restent disponibles, mais leur usage doit respecter ces règles.
+Figma values that fail when used outside their intended context remain available, but their usage must follow these rules.
 
-## Polices
+## Fonts
 
-`app-web` et `app-mobile` embarquent localement Montserrat et Inter, avec les graisses `400`, `600` et `700`. Les fichiers sont distribués sous la licence SIL Open Font License ; les notices `OFL.txt` sont conservées dans chaque dépôt applicatif.
+`app-web` and `app-mobile` bundle Montserrat and Inter locally, with weights `400`, `600`, and `700`. The files are distributed under the SIL Open Font License; `OFL.txt` notices are kept in each application repository.
